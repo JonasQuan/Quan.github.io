@@ -44,12 +44,21 @@ article {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-h1, h2 {
+h1{
+    color: #F5F5DC; /* Earthy brown for headings */
+}
+
+h2 {
     color: #6d5835; /* Earthy brown for headings */
 }
 
-p {
+p1 {
     color: #544339; /* Dark brown for paragraphs */
+    line-height: 1.6;
+}
+
+p2 {
+    color: #F5F5DC; /* Dark brown for paragraphs */
     line-height: 1.6;
 }
 
