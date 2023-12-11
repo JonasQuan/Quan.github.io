@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),src('https://github.com/jingquan28/Quan.github.io/blob/a71c0b2e7cd88e37bb46d9d696871f1bec034f36/pic/header2.png');
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('pic/header.png');
     background-size: cover;
     background-position: center;
     color: #fff;
