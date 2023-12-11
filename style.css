@@ -6,7 +6,9 @@ body {
 }
 
 header {
-    background-color: #6d5835; /* Earthy brown */
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('C:/Users/ASUS/Desktop/Oasiscape/pic/header.png');
+    background-size: cover;
+    background-position: center;
     color: #fff;
     text-align: center;
     padding: 1em 0;
@@ -16,7 +18,9 @@ nav {
     background-color: #8e735b; /* Light brown */
     color: #fff;
     text-align: center;
-    padding: 0.5em 0;
+    padding: 0.02em 0;
+    display:flexbox;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -24,28 +28,52 @@ nav a {
     text-decoration: none;
     padding: 1em;
     margin: 0 1em;
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+    transition: color 0.5s ease; /* Smooth color transition on hover */
+    display: inline-block; /*display links horizontally*/
+    position: relative /*Add this to position the vertical lines*/
 }
 
 nav a:hover {
     color: #c3a077; /* Lighter brown on hover */
 }
 
+nav a:not(:last-child)::after {
+    content: "|"; /* Vertical line content */
+    margin-left: 5em; /* Adjust the spacing between the link and the vertical line */
+    color: #ffffff87; /* Color of the vertical line */
+}
 main {
     max-width: 800px;
     margin: 2em auto;
     padding: 0 1em;
 }
 
-article {
+.profile-section {
+    display: flex;
+    align-items: center; /* Align items vertically in the flex container */
+}
+
+.profile-picture {
+    width: auto; /* Allow the width to adjust based on the height while maintaining aspect ratio */
+    height: 200px;
+    border-radius:50%;
+    object-fit: cover; /*ensure the image covers the entire container while maintaning aspect ratio*/
+    margin-left: 20px; /* Adjust the margin as needed */
+}
+
+.welcome-text {
     background-color: #fff;
     padding: 1.5em;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    flex: 1; /* Take up remaining space in the flex container */
 }
 
 h1{
     color: #F5F5DC; /* Earthy brown for headings */
+    padding: 1.9m;
+    border-radius: 5px;
+    display: inline-block;
 }
 
 h2 {
@@ -67,4 +95,22 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1em 0;
+}
+
+
+/* Media query for smaller screens (e.g., tablets and mobile devices) */
+@media only screen and (max-width: 300px) {
+    header {
+        background-image: none; /* Remove background image on smaller screens */
+    }
+
+    nav {
+        flex-direction: column; /* Change to a column layout for better stacking on small screens */
+        align-items: center; /* Center-align the items */
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0; /* Add some spacing between links */
+    }
 }

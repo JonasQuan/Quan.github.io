@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<label for="language">Select Language:</label>
+<select id="language" onchange="changeLanguage()">
+    <option value="en">English</option>
+    <option value="zh">中文</option>
+</select>
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,20 +23,31 @@
     </header>
 
     <nav>
-        <a href="/">Home</a>
-        <a href="/blog">Blog</a>
+        <a href="index.html">Home</a>
+        <a href="moment.html">Moment</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
     </nav>
 
     <main>
         <article>
-            <h2>Welcome to MySpace</h2>
-            <p1>Here is just a collection of pieces and bits of my stories and fantasy.</p1>
-            <p1>Ideas that this archive on the internet will stay beyond time and space.</p1>
-            <p1>Maybe the younger self and the older self would have gathered across different space-time to read this.</p1>
+            <div class="profile-section">
+                <div class="welcome-text">
+                    <h2>Welcome to MySpace</h2>
+                    <p1>Step into the realm of MySpace, where the echoes of ideas resonate eternally across the vast tapestry of the internet. Envision this archive as a timeless sanctuary, transcending the boundaries of both time and space. Picture a poignant convergence where the younger and older versions of oneself, dispersed across the intricate fabric of space-time, come together to immerse in the profound narratives encapsulated within these digital pages</p1>
+                </div>
+                <!-- Add your profile picture here -->
+                <img src="pic/me.png" alt="Profile Picture" class="profile-picture">
+            </div>
+            <!-- Background Music with Muted Autoplay and Controls -->
+            <audio controls autoplay loop>
+                <source src="audio/haruka-nakamura-PIANO-ENSEMBLE.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
         </article>
+        
 
+    
         <!-- Add more articles as needed -->
 
     </main>
